@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Merge properties files from several sources",
   "main": "index.js",
+  "types": "typings.d.ts",
   "scripts": {
     "start": "node fuse.js build:example",
     "build": "node fuse.js build",

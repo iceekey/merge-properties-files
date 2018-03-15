@@ -10,11 +10,11 @@ Install using npm:
 npm install merge-properties-files
 ```
 
-Require in your project and use it:
+Import to your project and use it:
 
 ```
 // import functions
-const { mergePropertiesFiles, savePropertiesFile } = require("./index.js");
+const { mergePropertiesFiles, savePropertiesFile } = require("merge-properties-files");
 
 // merge as many files as you want
 const merged = mergePropertiesFiles("a.properties", "b.properties", ...);
