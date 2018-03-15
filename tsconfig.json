@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES6",
+    "importHelpers": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  }
+}

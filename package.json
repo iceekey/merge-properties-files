@@ -1,0 +1,33 @@
+{
+  "name": "merge-properties-files",
+  "version": "1.0.0",
+  "description": "Merge properties files from several sources",
+  "main": "index.js",
+  "scripts": {
+    "start": "node fuse.js build:example",
+    "build": "node fuse.js build",
+    "test": "npm run build && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iceekey/merge-properties-files.git"
+  },
+  "keywords": [
+    "properties",
+    "merge"
+  ],
+  "author": "Iceekey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iceekey/merge-properties-files/issues"
+  },
+  "homepage": "https://github.com/iceekey/merge-properties-files#readme",
+  "dependencies": {
+    "properties-parser": "^0.3.1"
+  },
+  "devDependencies": {
+    "fuse-box": "^3.1.3",
+    "jest": "^22.4.2",
+    "typescript": "^2.7.2"
+  }
+}
