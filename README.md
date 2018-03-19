@@ -1,4 +1,4 @@
-# Merge Properties Files for NodeJS
+# Merge Properties Files for NodeJS (typings included)
 
 Merge properties files from several sources.
 
