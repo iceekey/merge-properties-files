@@ -20,7 +20,7 @@ const { mergePropertiesFiles, savePropertiesFile } = require("merge-properties-f
 const merged = mergePropertiesFiles("a.properties", "b.properties", ...);
 
 // save merged properties file
-savePropertiesFile(merged).then(() => { /* Saved */ });
+savePropertiesFile("path/to/save", merged).then(() => { /* Saved */ });
 ```
 
 ## mergePropertiesFiles(...paths: string[]): object
