@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/iceekey/merge-properties-files#readme",
   "dependencies": {
-    "properties-parser": "^0.3.1"
+    "properties-parser": "0.3.1"
   },
   "devDependencies": {
     "fuse-box": "^3.1.3",
