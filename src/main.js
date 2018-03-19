@@ -5,6 +5,15 @@ export function mergePropertiesFiles(...sources) {
     return Object.create(null);
   }
 
+  // just parse single file if there's one argument
+  if (arguments.length === 1) {
+    try {
+      return read(sources[0]);
+    } catch(e) {
+      return Object.create(null);
+    }
+  }
+
   return sources.reduce((heap, source) => {
     if (heap === null) {
       heap = Object.create(null);
@@ -14,6 +23,7 @@ export function mergePropertiesFiles(...sources) {
     if (typeof heap !== "object") {
       try {
         heap = read(heap);
+
       } catch(e) {
         // file wasn't found
         heap = Object.create(null);
@@ -30,7 +40,7 @@ export function mergePropertiesFiles(...sources) {
       // this will also cover null source case
       return heap;
     }
-  })
+  });
 }
 
 // used in tesing purposes
@@ -42,6 +52,11 @@ export async function savePropertiesFile(path, properties) {
       editor.set(key, properties[key]);
     }
 
-    editor.save(path, () => { r(); });
+    try {
+      editor.save(path, () => { r(properties); });
+    } catch(e) {
+      // Return error if there's error saving file
+      r(e);
+    }
   });
 }

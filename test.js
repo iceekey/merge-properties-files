@@ -37,6 +37,11 @@ test("should return an object", () => {
     .toBe("object");
 });
 
+test("should correct work in single file case", () => {
+  expect(mergePropertiesFiles(FOO_PROPERTIES))
+    .toEqual(foo);
+});
+
 test("should pass null/undefined files", () => {
   expect(mergePropertiesFiles(FOO_PROPERTIES, null, undefined))
     .toEqual(foo);

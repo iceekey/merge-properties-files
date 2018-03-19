@@ -17,6 +17,15 @@ function mergePropertiesFiles(...sources) {
     if (arguments.length === 0) {
         return Object.create(null);
     }
+    // just parse single file if there's one argument
+    if (arguments.length === 1) {
+        try {
+            return properties_parser_1.read(sources[0]);
+        }
+        catch (e) {
+            return Object.create(null);
+        }
+    }
     return sources.reduce((heap, source) => {
         if (heap === null) {
             heap = Object.create(null);
@@ -52,7 +61,13 @@ function savePropertiesFile(path, properties) {
             for (let key in properties) {
                 editor.set(key, properties[key]);
             }
-            editor.save(path, () => { r(); });
+            try {
+                editor.save(path, () => { r(properties); });
+            }
+            catch (e) {
+                // Return error if there's error saving file
+                r(e);
+            }
         });
     });
 }
