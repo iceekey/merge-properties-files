@@ -1,4 +1,7 @@
 language: node_js
+node_js:
+  - node
+  - "6.8.0"
 install: npm i
 script:
   - npm run build
