@@ -1,5 +1,7 @@
 # Merge Properties Files for NodeJS (typings included)
 
+[![Build Status](https://travis-ci.org/iceekey/merge-properties-files.svg?branch=master)](https://travis-ci.org/iceekey/merge-properties-files)
+
 Merge properties files from several sources.
 
 ## Getting Started
