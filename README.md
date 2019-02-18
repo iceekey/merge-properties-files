@@ -1,6 +1,6 @@
 # Merge Properties Files for NodeJS (typings included)
 
-## Warning! This project is abandoned! It's fully working though.
+### Warning! This project is abandoned! It's fully working though.
 
 Merge properties files from several sources.
 
